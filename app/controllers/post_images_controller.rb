@@ -16,6 +16,7 @@ class PostImagesController < ApplicationController
   end
 
   def show
+    @post_image = PostImage.find(params[:id])
   end
   
   private
@@ -24,3 +25,4 @@ class PostImagesController < ApplicationController
     params.require(:post_image).permit(:shop_name, :image, :caption)
   end
 end
+
